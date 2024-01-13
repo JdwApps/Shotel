@@ -6,7 +6,7 @@ import Slider from 'react-slick';
 import AnimatedTextCharacter from './AnimatedTextCharacter';
 import AniText from './AniText';
 
-const BGSlider = ({images, title}) => {
+const BGSlider = ({ images, title }) => {
 
   const settings = {
     dots: false,
@@ -31,24 +31,24 @@ const BGSlider = ({images, title}) => {
               <img src={`/img/${image}`} alt={`Slide ${index + 1}`} className="w-full h-full object-cover" />
               <div
                 className="absolute bottom-0 w-full h-1/5 bg-gradient-to-t from-gray-800 to-transparent"
-    
+
               ></div>
             </div>
-            <div
+            <div className='text-gray-800'
               style={{
-                position: 'absolute',
+                position:'absolute',
                 top: '50%',
                 left: '50%',
                 transform: 'translate(-50%, -50%)',
-                color: 'white',
                 textAlign: 'center',
-                width: '100%', // Set width to 100%
               }}
             >
-              <AnimatedTextCharacter text="S" />
-              <AnimatedTextCharacter text={title} />
-              <AniText text="Bluff Beach, Bocas del Toro" />
-            
+              <div className='bg-gray-200 bg-opacity-20 rounded-full p-12'>
+                <AnimatedTextCharacter text="S" />
+                <AnimatedTextCharacter text={title} />
+                <AniText text="Bluff Beach, Bocas del Toro" />
+              </div>
+
             </div>
           </div>
         ))}

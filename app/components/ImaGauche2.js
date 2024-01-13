@@ -15,7 +15,7 @@ const ImaGauche = () => {
     });
 
     return (
-        <div className="w-full h:full md:h-3/4 my-12 mb-24 bg-gray-800">
+        <div className="w-full h:full md:h-3/4 my-12 mb-48 bg-gray-800">
 
             <div className="block lg:flex justify-center items-center md:items-stretch">
                 <div className="w-screen lg:w-1/2 xl:w-1/3 m-auto h:full ">

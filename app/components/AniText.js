@@ -47,8 +47,8 @@ const AniText = ({ text }) => {
     >
       {letters.map((letter, index) => (
         <motion.span    
-        style={{ textShadow: "3px 3px 4px rgba(0,0,0,0.5)" }}       
-        className="font-poppins justify-center" 
+        style={{ textShadow: "3px 3px 4px rgba(255,255,255,0.2)" }}       
+        className=" justify-center" 
         variants={child} 
         key={index}>
           {letter === " " ? "\u00A0" : letter}

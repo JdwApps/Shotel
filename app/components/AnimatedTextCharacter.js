@@ -42,15 +42,15 @@ const AniText = ({ text }) => {
   return (
     <div className={styleScript.className}>
     <motion.div
-      className="overflow-hidden  text-4xl md:text-8xl"
+      className="overflow-hidden  p-12 text-4xl md:text-8xl"
       variants={container}
       initial="hidden"
       animate="visible"
     >
       {letters.map((letter, index) => (
         <motion.span    
-        style={{ textShadow: "2px 2px 4px rgba(0,0,0,0.3)" }}       
-        className="font-great-vibes justify-center text-white" 
+        style={{ textShadow: "2px 2px 4px rgba(255,255,255,0.3)" }}       
+        className="font-great-vibes  justify-center text-gray-800" 
         variants={child} 
         key={index}>
           {letter === " " ? "\u00A0" : letter}

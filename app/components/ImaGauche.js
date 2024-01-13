@@ -16,10 +16,10 @@ const ImaGauche = () => {
     });
 
     return (
-        <div className=" md:h-3/4 mt-12 bg-gray-800">
+        <div className=" md:h-3/4 pb-24 pt-24 mt-12 bg-gray-800">
     
-            <div className="block md:flex justify-center items-center md:items-stretch">
-                <div className="w-screen m-auto  h-full md:w-1/2 xl:w-1/3  ">
+            <div className="block md:flex justify-center items-center ">
+                <div className="w-screen m-auto  h-full md:w-1/2 xl:w-2/5  ">
                     <motion.img
                         ref={ref}
                         initial={{ opacity: 0, y: 50 }}

@@ -16,12 +16,12 @@ const ImaDroite = () => {
     });
 
     return (
-        <div className="w-full h:full md:h-3/4 pb-12 bg-gris">
+        <div className="w-full h:full md:h-3/4 pt-24 pb-24 bg-gris">
 
 
             <div className="block md:flex justify-center">
                 <motion.div
-                    className="flex w-full md:w-1/2 p-10 item-center justify-center relative"
+                    className="flex w-full md:w-1/2 p-10 items-center justify-center relative"
                     initial={{ opacity: 0, y: 50 }}
                     animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
                     transition={{ duration: 0.6 }}
@@ -34,7 +34,7 @@ const ImaDroite = () => {
                             className="svg-background"
                         >
                             <path
-                                fill="#4A5568"
+                                fill="#283061"
                                 stroke="#141414"
                                 strokeWidth="0.1"
                                 strokeDasharray="0.600001, 0.600001"
@@ -51,7 +51,7 @@ const ImaDroite = () => {
                     >
                         <div className="justify-center items-center">
                             <Title text='Restaurant' />
-                            <p className="text-l text-gray-200 md:text-1xl lg:text-xl align-text-center">
+                            <p className=" text-gray-200 md:text-1xl lg:text-xl align-text-center">
                                 Embrace the serenity of our exclusive hotel nestled within a lush natural reserve, enveloped by breathtaking jungle landscapes and a pristine, sun-kissed beach. Experience a harmonious blend of luxury and nature, where every moment is infused with the enchanting beauty of the surrounding wilderness. Discover paradise redefined.
                             </p>
                             <Link href='${lng}/Restaurant'>
@@ -60,7 +60,7 @@ const ImaDroite = () => {
                         </div>
                     </motion.div>
                 </motion.div>
-                <div className="w-screen md:w-1/2 xl:w-1/3 m-auto  h:full ">
+                <div className="w-screen md:w-1/2 xl:w-2/5 m-auto  h:full ">
                     <motion.img
                         ref={ref}
                         initial={{ opacity: 0, y: 50 }}
