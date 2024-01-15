@@ -9,6 +9,8 @@ import { useInView } from 'react-intersection-observer';
 import Title from './Title';
 import CTA from './CTA';
 import Link from 'next/link';
+import Image from 'next/image'; 
+
 
 
 const Cha1 = ({ title, text, images, CTAname, CTAlink, bgColor }) => {
@@ -32,26 +34,30 @@ const Cha1 = ({ title, text, images, CTAname, CTAlink, bgColor }) => {
 
 
     return (
-        <div className={`w-full h-full md:h-3/4  pt-12 ${bgColor}`}>
+        <div className={`  pt-12 ${bgColor}`}>
 
 
-            <div className=" justify-center align-center   ">
+            <div className="   ">
             <Title text={title} />
-                <div className="w-4/5 m-auto mt-8 lg:w-3/4 h-1/2">
+                <div className=" mx-auto items-center justify-center mt-8 ">
                     <motion.div
                         ref={ref}
                         initial={{ opacity: 0, y: 50 }}
                         animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
                         transition={{ duration: 0.6 }}
-                        className="w-full rounded-lg "
+                        className="items-center justify-center"
                     >
-                        <Slider {...settings}>
+                        <Slider {...settings} className="md:w-3/4 w-full lg:w-3/5 h-1/2 mx-auto ">
                             {images.map((image, index) => (
                                 <div key={index}>
-                                    <img
-                                        src={`./img/${image}`}
+                                    <Image
+                                        src={`/img/${image}`}
                                         alt={`chambre${index + 1}`}
-                                        className=" rounded-lg"
+                                        width={1500} 
+                                        height={900} 
+                                        className="w-full rounded-lg"
+                                        sizes='75vw'
+                                        style={{objectFit: "cover"}}	
                                     />
                                 </div>
                             ))}
@@ -59,7 +65,7 @@ const Cha1 = ({ title, text, images, CTAname, CTAlink, bgColor }) => {
                     </motion.div>
                 </div>
                 <motion.div
-                    className="flex w-wull lg:w-3/4 m-auto p-10 item-center justify-center relative"
+                    className="flex md:w-3/4 w-full lg:w-3/5 m-auto py-10 item-center justify-center relative"
                     initial={{ opacity: 0, y: 50 }}
                     animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
                     transition={{ duration: 0.6 }}
@@ -85,11 +91,11 @@ const Cha1 = ({ title, text, images, CTAname, CTAlink, bgColor }) => {
                         initial={{ opacity: 0 }}
                         animate={inView ? { opacity: 1 } : { opacity: 0 }}
                         transition={{ duration: 0.6, delay: 0.5 }}
-                        className="px-10  z-10"
+                        className="  z-10"
                     >
                         <div className="justify-center items-center">
                             
-                            <p className="text-l text-gray-200  lg:text-xl align-text-center">
+                            <p className="text-l text-gray-200 px-10 md:px-0 lg:text-xl align-text-center">
                                 {text}
                             </p>
                             <Link href={CTAlink}>
