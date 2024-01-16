@@ -42,7 +42,7 @@ const AniText = ({ text }) => {
   return (
     <div className={styleScript.className}>
     <motion.div
-      className="overflow-hidden  p-12 text-4xl md:text-8xl"
+      className="overflow-hidden  p-12 text-5xl md:text-8xl"
       variants={container}
       initial="hidden"
       animate="visible"
