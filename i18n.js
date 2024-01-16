@@ -1,4 +1,4 @@
 export const i18n = {
-    defaultLocale: 'en',
-    locales: ['hi', 'en']
+    defaultLocale: 'fr',
+    locales: ['fr', 'en']
   }
