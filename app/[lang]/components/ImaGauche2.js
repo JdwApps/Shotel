@@ -57,7 +57,7 @@ const ImaGauche = () => {
                         transition={{ duration: 0.6, delay: 0.5 }}
                         className="px-10  z-10 justify-center items-center"
                     >
-                        <Title text='Leasures' />
+                        <Title text='Activities' />
                         <p className="text-l text-gray-200 md:text-1xl lg:text-xl align-text-center">
                             Embrace the serenity of our exclusive hotel nestled within a lush natural reserve, enveloped by breathtaking jungle landscapes and a pristine, sun-kissed beach. Experience a harmonious blend of luxury and nature, where every moment is infused with the enchanting beauty of the surrounding wilderness. Discover paradise redefined.
                         </p>

@@ -5,7 +5,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import Slider from 'react-slick';
 import AnimatedTextCharacter from './AnimatedTextCharacter';
 import AniText from './AniText';
-
+import Image from 'next/image';
 const BGSlider = ({ images, title }) => {
 
   const settings = {
@@ -28,7 +28,14 @@ const BGSlider = ({ images, title }) => {
         {images.map((image, index) => (
           <div className="relative" key={index}>
             <div className="w-full h-screen relative" >
-              <img src={`/img/${image}`} alt={`Slide ${index + 1}`} className="w-full h-full object-cover" />
+              <Image
+                                        src={`/img/${image}`}
+                                        alt={`chambre${index + 1}`}
+                                        width={1500} 
+                                        height={900} 
+                                        className="w-full h-full object-cover"                                        sizes='75vw'
+                                        style={{objectFit: "cover"}}	
+                                    />
               <div
                 className="absolute bottom-0 w-full h-1/5 bg-gradient-to-t from-gray-800 to-transparent"
 

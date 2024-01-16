@@ -72,7 +72,7 @@ const NavBar = () => {
       </motion.div>
 
       <div className="hidden md:flex items-center space-x-12">
-        {["Hotel", "Restaurant", "Leasures", "About", "Contact"].map(
+        {["Hotel", "Restaurant", "Activities", "About", "Contact"].map(
           (item, index) => (
             <motion.div
               key={index}
@@ -111,7 +111,7 @@ const NavBar = () => {
             onClick={toggleMenu}
           >
             <div className="flex flex-col items-center text-white space-y-4">
-              {["Hotel", "Restaurant", "Leasures", "About", "Contact"].map(
+              {["Hotel", "Restaurant", "Activities", "About", "Contact"].map(
                 (item, index) => (
                   <motion.a
                     key={index}

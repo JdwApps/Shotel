@@ -56,7 +56,7 @@ const Cha1 = ({ title, text, images, CTAname, CTAlink, bgColor }) => {
                                         width={1500} 
                                         height={900} 
                                         className="w-full rounded-lg"
-                                        sizes='75vw'
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 60vw"
                                         style={{objectFit: "cover"}}	
                                     />
                                 </div>

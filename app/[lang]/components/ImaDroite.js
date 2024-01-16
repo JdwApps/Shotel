@@ -42,7 +42,6 @@ const ImaDroite = () => {
                                 id="path303" />
                         </svg>
                     </div>
-
                     <motion.div
                         initial={{ opacity: 0 }}
                         animate={inView ? { opacity: 1 } : { opacity: 0 }}
@@ -54,7 +53,7 @@ const ImaDroite = () => {
                             <p className=" text-gray-200 md:text-1xl lg:text-xl align-text-center">
                                 Embrace the serenity of our exclusive hotel nestled within a lush natural reserve, enveloped by breathtaking jungle landscapes and a pristine, sun-kissed beach. Experience a harmonious blend of luxury and nature, where every moment is infused with the enchanting beauty of the surrounding wilderness. Discover paradise redefined.
                             </p>
-                            <Link href='${lng}/Restaurant'>
+                            <Link href='/Restaurant'>
                                 <CTA name='View More' />
                             </Link>
                         </div>
@@ -67,11 +66,10 @@ const ImaDroite = () => {
                         animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
                         transition={{ duration: 0.6 }}
                         src="./img/dessus.png"
-                        alt="Your Image"
+                        alt="Best Food in Bocas"
                         className="w-full rounded-lg h:full "
                     />
                 </div>
-
             </div>
         </div>
     );

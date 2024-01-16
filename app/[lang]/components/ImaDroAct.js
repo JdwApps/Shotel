@@ -7,8 +7,9 @@ import { useInView } from 'react-intersection-observer';
 import Title from './Title';
 import CTA from './CTA';
 import Link from 'next/link';
+import Image from 'next/image';
 
-const ImaDroite = () => {
+const ImaDroAct = ({image, titre, text}) => {
     const controls = useAnimation();
     const [ref, inView] = useInView({
         triggerOnce: true,
@@ -16,7 +17,7 @@ const ImaDroite = () => {
     });
 
     return (
-        <div className="w-full h:full md:h-3/4 pb-12 bg-gris">
+        <div className="w-full h:full md:h-3/4 py-12 bg-gris">
 
 
             <div className="block md:flex justify-center">
@@ -50,23 +51,32 @@ const ImaDroite = () => {
                         className="px-10  z-10"
                     >
                         <div className="justify-center items-center">
-                            <Title text='Hikes' />
+                            <Title text={titre} />
                             <p className="text-l text-gray-200 md:text-1xl lg:text-xl align-text-center">
-                                Embrace the serenity of our exclusive hotel nestled within a lush natural reserve, enveloped by breathtaking jungle landscapes and a pristine, sun-kissed beach. Experience a harmonious blend of luxury and nature, where every moment is infused with the enchanting beauty of the surrounding wilderness. Discover paradise redefined.
+                                {text}
                             </p>
                         </div>
                     </motion.div>
                 </motion.div>
                 <div className="w-screen md:w-1/2 xl:w-1/3 m-auto  h:full ">
-                    <motion.img
+                    <motion.div
                         ref={ref}
                         initial={{ opacity: 0, y: 50 }}
                         animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
                         transition={{ duration: 0.6 }}
-                        src="./img/plage3.jpg"
-                        alt="Your Image"
-                        className="w-full rounded-lg h:full "
-                    />
+
+                    >
+                        <Image
+                                        src={`/img/${image}`}
+                                        alt={'chambre'}
+                                        width={1500} 
+                                        height={900} 
+                                        className="w-full rounded-lg"
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 60vw"
+                                        style={{objectFit: "cover"}}	
+                                    /> 
+                    </motion.div>
+
                 </div>
 
             </div>
@@ -74,5 +84,5 @@ const ImaDroite = () => {
     );
 };
 
-export default ImaDroite;
+export default ImaDroAct;
 

@@ -1,12 +1,10 @@
 'use client'
 
-
 import React from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import Title from './Title';
-import CTA from './CTA';
-import Link from 'next/link';
+
 
 const ImaDroite = () => {
     const controls = useAnimation();
