@@ -1,5 +1,20 @@
 {
     "name": "nom",
     "email": "courriel",
-    "city": "ville"
+    "city": "ville",
+    "hotel":"Hôtel",
+    "resto":"Restaurant",
+    "activite":"Activités",
+    "homeHotel":"Hotêl super sympa",
+    "homeRestaurant":"Dégustez les meilleurs plats",
+    "homeActivities":"Surf, plage, balades, la plage de bluff vous propose diverses activités",
+    "homeFaune":"",
+    "hikes": "Balades",
+    "hikesText":"Le doux murmure des vagues caressant le rivage se mêle au chant des oiseaux exotiques dans la luxuriante forêt tropicale et chaque pas révèle une nature préservée et une harmonie parfaite entre la mer scintillante et la verdure luxuriante, créant ainsi un tableau idyllique propice à la détente et à la contemplation.",
+    "surf":"Surf",
+    "surfText":"Bocas del Toro, paradis du surf, séduit les passionnés avec ses vagues puissantes et ses plages idylliques. Les surfeurs explorent les eaux cristallines, défiant les vagues spectaculaires de cette destination tropicale exceptionnelle.",
+    "beach":"Plages",
+    "beachText":"Les plages de Bocas del Toro, baignées par les eaux turquoise de la mer des Caraïbes, captivent par leur sable blanc éclatant. Sous les palmiers, elles offrent un havre de tranquillité, invitant à la détente face à des panoramas côtiers époustouflants.",
+    "snorkel":"Plongée",
+    "snorkelText":"Bocas del Toro, joyau de la plongée en apnée, révèle un monde sous-marin éblouissant. Des coraux chatoyants et une vie marine foisonnante enchantent les explorateurs. Sur les plages, le sable fin invite à la détente, offrant un havre de paix entre palmiers et brise marine."
   }

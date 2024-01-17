@@ -4,6 +4,7 @@ import BGSlider from "../components/BGSlider";
 import Title from "../components/Title";
 import ImaBeach from "../components/ImaBeach";
 import ImaDroAct from "../components/ImaDroAct";
+import ImaGauAct from "../components/ImaGauAct";
 import ImaSnorkel from "../components/ImaSnorkel";
 import ImaSurf from "../components/ImaSurf";
 import Separator from "../components/Separator";
@@ -30,13 +31,13 @@ export default async function Activities({params}) {
             />
             <div className='py-12'>
                 <Title text='Activities' />
-                <ImaBeach />
+                <ImaGauAct titre={lang.beach} text={lang.beachText} image='plage1.jpg' />
                 <Separator />
-                <ImaDroAct titre={lang.name} text='blabla' image='chambre1.jpg' />
+                <ImaDroAct titre={lang.hikes} text={lang.hikesText} image='plage2.jpg' />
                 <SeparatorB />
-                <ImaSnorkel />
+                <ImaGauAct titre={lang.snorkel} text={lang.snorkelText} image='plage3.jpg' />
                 <Separator />
-                <ImaSurf />
+                <ImaDroAct titre={lang.surf} text={lang.surfText} image='plage4.jpg' />
                 <SeparatorB />
                 <DynamicBocasMap />
             </div>
