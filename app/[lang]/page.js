@@ -21,13 +21,12 @@ export default async function Home({params}) {
       <BGSlider title='Hotel and Restaurant' 
       images = {['plage1.jpg', 'plage2.jpg', 'plage3.jpg', 'plage4.jpg']}
       />
-      <p>{lang.name}</p>
-      <ImaGauche />
+      <ImaGauche image='chambre1.jpg' text={lang.homeHotel} title={lang.hotel}/>
       <Separator />     
-      <ImaDroite />
+      <ImaDroite image='plage1.jpg' text={lang.homeRestaurant} title={lang.resto}/>
       <SeparatorB />
 
-      <ImaGauche2 />
+      <ImaGauche image='plage3.jpg' text={lang.homeActivities} title={lang.activite}/>
       <ParallaxBanner />
       <BigText />
 

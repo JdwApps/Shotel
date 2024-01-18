@@ -7,28 +7,33 @@ import { useInView } from 'react-intersection-observer';
 import Title from './Title';
 import CTA from './CTA';
 import Link from 'next/link';
+import Image from 'next/image';
 
-const ImaGauche = ({ image, text, title }) => {
+const ImaGauAct = ({image, titre, text}) => {
     const controls = useAnimation();
     const [ref, inView] = useInView({
         triggerOnce: true,
-        threshold: 0.5,
+        threshold: 0.2,
     });
 
     return (
-        <div className=" md:h-3/4 pb-24 pt-24 mt-12 bg-gray-800">
-            <div className="block md:flex justify-center items-center ">
-                <div className="w-screen m-auto  h-full md:w-1/2 xl:w-2/5  ">
-                    <motion.img
+        <div className="w-full h:full md:h-3/4 py-12 bg-gray-800">
+
+
+            <div className="block md:flex justify-center">
+            <div className="w-screen md:w-1/2 xl:w-1/3 m-auto  h:full ">
+            <motion.img
                         ref={ref}
                         initial={{ opacity: 0, y: 50 }}
                         animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
                         transition={{ duration: 0.6 }}
                         src={`/img/${image}`}
-                        alt="Best Food in Bocas"
+                        alt="Your Image"
                         className="w-full rounded-lg h:full "
                     />
+
                 </div>
+
                 <motion.div
                     className="flex w-full md:w-1/2 p-10 item-center justify-center relative"
                     initial={{ opacity: 0, y: 50 }}
@@ -51,24 +56,26 @@ const ImaGauche = ({ image, text, title }) => {
                                 id="path303" />
                         </svg>
                     </div>
+
                     <motion.div
                         initial={{ opacity: 0 }}
                         animate={inView ? { opacity: 1 } : { opacity: 0 }}
                         transition={{ duration: 0.6, delay: 0.5 }}
-                        className="px-10  z-10 justify-center items-center"
+                        className="px-10  z-10"
                     >
-                            <Title text={title} />
-                        <p className="text-l text-gray-100 md:text-1xl lg:text-xl align-text-center">
-                            {text}                        </p>
-                        <Link href='/Hotel'>
-                            <CTA name='View More' />
-                        </Link>
+                        <div className="justify-center items-center">
+                            <Title text={titre} />
+                            <p className="text-l text-gray-200 md:text-1xl lg:text-xl align-text-center">
+                                {text}
+                            </p>
+                        </div>
                     </motion.div>
                 </motion.div>
+              
             </div>
         </div>
     );
 };
 
-export default ImaGauche;
+export default ImaGauAct;
 

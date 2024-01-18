@@ -50,15 +50,8 @@ const Cha1 = ({ title, text, images, CTAname, CTAlink, bgColor }) => {
                         <Slider {...settings} className="md:w-3/4 w-full lg:w-3/5 h-1/2 mx-auto ">
                             {images.map((image, index) => (
                                 <div key={index}>
-                                    <Image
-                                        src={`/img/${image}`}
-                                        alt={`chambre${index + 1}`}
-                                        width={1500} 
-                                        height={900} 
-                                        className="w-full rounded-lg"
-                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 60vw"
-                                        style={{objectFit: "cover"}}	
-                                    />
+                                                <img src={`/img/${image}`} alt={`Slide ${index + 1}`}  />
+
                                 </div>
                             ))}
                         </Slider>

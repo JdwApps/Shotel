@@ -70,7 +70,7 @@ const NavBar = () => {
           <p className="text-3xl text-white font-bold">S</p>
         </Link>
       </motion.div>
-
+     
       <div className="hidden md:flex items-center space-x-12">
         {["Hotel", "Restaurant", "Activities", "About", "Contact"].map(
           (item, index) => (

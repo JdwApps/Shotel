@@ -28,14 +28,7 @@ const BGSlider = ({ images, title }) => {
         {images.map((image, index) => (
           <div className="relative" key={index}>
             <div className="w-full h-screen relative" >
-              <Image
-                                        src={`/img/${image}`}
-                                        alt={`chambre${index + 1}`}
-                                        width={1500} 
-                                        height={900} 
-                                        className="w-full h-full object-cover"                                        sizes='75vw'
-                                        style={{objectFit: "cover"}}	
-                                    />
+            <img src={`/img/${image}`} alt={`Slide ${index + 1}`} className="w-full h-full object-cover" />
               <div
                 className="absolute bottom-0 w-full h-1/5 bg-gradient-to-t from-gray-800 to-transparent"
 
